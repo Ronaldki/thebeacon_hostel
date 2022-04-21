@@ -9,22 +9,18 @@
 
 
     // $image =$_POST['adminimg'];
-    $image = $_POST['adminimg'];
-    $tmp_name = $_POST['adminimg'];
+    $image = $_FILES['adminimg'];
+    $tmp_name = $_FILES['adminimg'];
     $storage = "uploads/" .$image;
 
     move_uploaded_file($image, $storage);
 
 
     if(move_uploaded_file($image, $storage)){
-        echo '<script type ="text/JavaScript">';  
-      echo 'alert("File uploaded")';  
-      echo '</script>'; 
+      echo 'Uploaded';
       
     }else{
-      echo '<script type ="text/JavaScript">';  
-      echo 'alert("Error Uploading file")';  
-      echo '</script>'; 
+      echo 'Error uploading file';
     }
  $count =6;
 //  some validation here..........needed....
