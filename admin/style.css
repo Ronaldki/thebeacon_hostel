@@ -270,3 +270,8 @@ margin-left: 10px;
 
 
 }
+
+.bx-menu:hover{
+    cursor:pointer;
+}
+

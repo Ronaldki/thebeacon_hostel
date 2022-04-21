@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,8 @@
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bxs-folder-plus'></i>                    <span class="links_name">Roams</span>
+                    <i class='bx bxs-folder-plus'></i> 
+                    <span class="links_name">Roams</span>
                 </a>
                 <span class="tooltip">Rooms</span>
             </li>
@@ -55,8 +57,10 @@
                 <span class="tooltip">Hostels</span>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bx-cog'></i>                    <span class="links_name">Setting</span>
+                <!-- All settings here...... -->
+                <a href="sign.php" id="settings">
+                    <i class='bx bx-cog'></i>                    
+                    <span class="links_name">Setting</span>
                 </a>
                 <span class="tooltip">Setting</span>
             </li>
@@ -64,6 +68,7 @@
         <div class="profile_content">
             <div class="profile">
                 <div class="profile_details">
+                    <!-- admin image.... -->
                     <img src="uploads/IMG_8696.JPG  " alt="Admin_log">
                     <div class="name_job">
                         <div class="name">Manager</div>
@@ -92,6 +97,17 @@
                 sidebar.classList.toggle("active");
           }
 
+          $(document).ready(function() {
+             $(".text").load("index.php");
+             $("#settings").click(function(){
+                $(".text").load("sign.php");
+             }); 
+
+            //  $("#add").click(function(){
+            //     $("#add").css({"color":"white","text-decoration":"none"});
+            //     $(".frame").load("register.php");
+            // });
+          });
 
 </script>
     </body>
