@@ -17,10 +17,14 @@
 
 
     if(move_uploaded_file($image, $storage)){
-      echo 'Uploaded';
+        echo '<script type ="text/JavaScript">';  
+      echo 'alert("File uploaded")';  
+      echo '</script>'; 
       
     }else{
-      echo 'Error uploading file';
+      echo '<script type ="text/JavaScript">';  
+      echo 'alert("Error Uploading file")';  
+      echo '</script>'; 
     }
  $count =6;
 //  some validation here..........needed....
