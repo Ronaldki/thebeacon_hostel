@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Side</title>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="style.css">
 
 
@@ -58,7 +58,7 @@
             </li>
             <li>
                 <!-- All settings here...... -->
-                <a href="sign.php" id="settings">
+                <a href="#" id="settings">
                     <i class='bx bx-cog'></i>                    
                     <span class="links_name">Setting</span>
                 </a>
@@ -79,8 +79,11 @@
             </div>
         </div>
     </div>  
-      <div class="home_content">
-          <div class="text">Home content</div>
+      <div class="home_content ">
+          <div class="text " ><?php
+          
+          ?>  </div>
+             
       </div>
 
 
@@ -98,7 +101,7 @@
           }
 
           $(document).ready(function() {
-             $(".text").load("index.php");
+             $(".text").load("sign.php");
              $("#settings").click(function(){
                 $(".text").load("sign.php");
              }); 

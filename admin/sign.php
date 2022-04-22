@@ -9,8 +9,8 @@
 
 
     // $image =$_POST['adminimg'];
-    $image = $_FILES['adminimg'];
-    $tmp_name = $_FILES['adminimg'];
+    $image = $_POST['adminimg'];
+    $tmp_name = $_POST['adminimg'];
     $storage = "uploads/" .$image;
 
     move_uploaded_file($image, $storage);
@@ -144,18 +144,27 @@
 }
 
 /* The Close Button */
-.close {
+/* .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
-  font-weight: bold;
+  
+  
 }
 
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
-  cursor: pointer;
+   */
+
+   #cls{
+     margin-left:95%;
+     cursor: pointer;
+     color:red; 
+     font-size: 28px;
+    font-weight: bold;
+
+   }
 }
 	</style>
 </head>
@@ -165,7 +174,7 @@
 	<div class="container modal" id="myModal">
  <form action="" method="post" class="" >
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" id="cls">X</span>
               <div class="fontuser">
                 <label><b>FirstName</b></label>
                 <br>
@@ -215,7 +224,24 @@
         </form>            
 	</div>
 
-    <script>
+
+  <script>
+    $(document).ready(function(){
+      $('#myBtn').click(function(){
+        $('.modal').show();
+      });
+
+      $('#cls').click(function(){
+        $('.modal').hide();
+
+      });
+
+    });
+
+
+
+  </script>
+    <!-- <script>
         // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -241,7 +267,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-    </script>
+    </script> -->
 </body>
 
 </html>
