@@ -1,4 +1,9 @@
 
+<?php
+include('connect.php');
+// all connections in connect.php....
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +35,10 @@
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bx-building-house'></i>
-                    <span class="links_name">Bookings</span>
+                    <i class='bx bxs-building-house'></i>
+                    <span class="links_name">Hostels</span>
                 </a>
-                <span class="tooltip">Bookings</span>
+                <span class="tooltip">Hostels</span>
             </li>
             <li>
                 <a href="#">
@@ -51,10 +56,10 @@
             </li>
             <li>
                 <a href="#">
-                    <i class='bx bxs-building-house'></i>
-                    <span class="links_name">Hostels</span>
+                    <i class='bx bx-building-house'></i>
+                    <span class="links_name">Bookings</span>
                 </a>
-                <span class="tooltip">Hostels</span>
+                <span class="tooltip">Bookings</span>
             </li>
             <li>
                 <!-- All settings here...... -->

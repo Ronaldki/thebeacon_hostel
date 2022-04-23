@@ -1,53 +1,6 @@
 <?php
  include "../config/connection.php";
 
- if(isset($_POST['sub'])){
-    $fnane =$_POST['firstname'];
-    $lnane =$_POST['lastname'];
-    $password =$_POST['psw'];
-    $role =$_POST['role'];
-
-
-    // $image =$_POST['adminimg'];
-    $image = $_POST['adminimg'];
-    $tmp_name = $_POST['adminimg'];
-    $storage = "uploads/" .$image;
-
-    move_uploaded_file($image, $storage);
-
-
-    if(move_uploaded_file($image, $storage)){
-      echo 'Uploaded';
-      
-    }else{
-      echo 'Error uploading file';
-    }
- $count =6;
-//  some validation here..........needed....
- if($password >= $count){
-  $sql = "INSERT INTO admin_tbl(fname, lname, admin_password, admin_role, admin_image) 
-    VALUES('$fnane', '$lnane', '$password', '$role' , '$image')";
-
-    $query = mysqli_query($con,$sql);
-
-    if($query){
-      header('location:sign.php'); 
-    }
-    else{
-
-      echo '<script type ="text/JavaScript">';  
-      echo 'alert("Data Not Inserted")';  
-      echo '</script>'; 
-    }
- } else{
-  echo '<script type ="text/JavaScript">';  
-      echo 'alert("Password should be more than 6 characters")';  
-      echo '</script>'; 
- }
-    
-
- }
-
 
 ?>
 <!DOCTYPE html>
@@ -61,10 +14,11 @@
 	<style>
 	
     form{
-            width: 50%;
+            width: 80%;
             /* background: #1d1b31; */
-            padding-left: 25%;
-            padding-top: 3%;
+            padding-left: 10%;
+            padding-top: 0%;
+            position:absolute;
         }
 
        
@@ -131,8 +85,8 @@
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /* background-color: rgb(0,0,0); Fallback color */
+  /* background-color: #fff;  */
 }
 /* Modal Content/Box */
 .modal-content {
@@ -152,7 +106,7 @@
 }
 
 .close:hover,
-.close:focus {
+.close:focus 
   color: black;
   text-decoration: none;
    */
@@ -165,14 +119,19 @@
     font-weight: bold;
 
    }
+
+.regbtn{
+width: 30%;
+margin-left:10%
 }
-	</style>
+
+</style>
 </head>
 
 <body>
-<button type="" id="myBtn">Register Admin</button>
+<button type="button" class="regbtn" id="myBtn">Register Admin</button>
 	<div class="container modal" id="myModal">
- <form action="" method="post" class="" >
+ <form action="" method="post" class="">
             <div class="modal-content">
                 <span class="close" id="cls">X</span>
               <div class="fontuser">
@@ -201,9 +160,9 @@
                 <i class="fa fa-key fa-lg"></i>
             </div>	
             <div>
-                <select name="role" id="" required>
-                    <option value="">Super Admin</option>
-                    <option value="">Admin</option>
+                <select name="role" id="role" required>
+                    <option value="0" name="role">Super Admin</option>
+                    <option value="1" name="role">Admin</option>
                 </select>
             </div>
             <br>
@@ -216,16 +175,15 @@
             </div>
         
             <button type="submit" id="" name="sub">Register</button>
-            <br>
 
-            <input type="checkbox" checked="checked">
-                 Remember me 
             </div>
         </form>            
 	</div>
 
 
   <script>
+
+    
     $(document).ready(function(){
       $('#myBtn').click(function(){
         $('.modal').show();
