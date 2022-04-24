@@ -1,3 +1,4 @@
+<!-- All connection files -->
 <?php
     include "../config/connection.php";
 
@@ -44,8 +45,34 @@ if(isset($_POST['sub'])){
 //       echo 'alert("Password should be more than 6 characters")';  
 //       echo '</script>'; 
 //  }
-    
 
  }
+// Addd hostels Validations here.................
 
- 
+
+
+if(isset($_POST['send'])){
+    $hname = $_POST['hostname'];
+    $ownname = $_POST['ownername'];
+    $ownnuber = $_POST['number'];
+    $hlocation = $_POST['location'];
+    $roomsavail = $_POST['rooms'];
+    $status = $_POST['status'];
+    $hostimg = $_POST['hostimage'];
+    $backimg = $_POST['backimage'];
+    $roomimg = $_POST['roomimage'];
+
+
+    $qry = "INSERT INTO hostel_tbl(hostel_name, owner_name,owner_number,hostel_location, rooms_available, mixed_or_single, hostel_picture, sample_image,back_image) VALUES('$hname', '$ownname', '$ownnuber', '$hlocation', '$roomsavail', '$status','$hostimg', '$backimg','$roomimg')";
+
+        $rs = mysqli_query($con,$qry);
+        if($rs){
+            header('location:main.php'); 
+        }
+        else{
+            echo '<script type = "text/JavaScript">';
+            echo 'alert("Data Not Insertd")';
+            echo '</script>';
+        }
+
+}

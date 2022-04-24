@@ -133,7 +133,7 @@ border-radius: 12px !important;
     outline: none;
     border: none;
     background: #1d1b31;
-    padding-left: 50px;
+    padding-left: 25px;
     font-size: 18px;
     color: white; 
 }
@@ -142,6 +142,7 @@ border-radius: 12px !important;
     position: absolute;
     z-index: 99;
     color: #fff;
+    align-items: center;
     font-size: 22px;
     transition: all 0.5s ease;
 }
@@ -171,7 +172,7 @@ border-radius: 12px !important;
     min-width: 50px;
     border-radius: 12px !important;
     line-height: 50px;
-    text-align: center;
+    text-align: left;
 }
 
 .sidebar .profile_content{

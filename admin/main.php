@@ -34,7 +34,7 @@ include('connect.php');
                <span class="tooltip">Search</span>
             </li>
             <li>
-                <a href="#">
+                <a href="#" id="hostels">
                     <i class='bx bxs-building-house'></i>
                     <span class="links_name">Hostels</span>
                 </a>
@@ -85,11 +85,12 @@ include('connect.php');
         </div>
     </div>  
       <div class="home_content ">
-          <div class="text " ><?php
-          
-          ?>  </div>
+          <div class="text " >
+              <!-- loading other pages here......... -->
+
+          </div>
              
-      </div>
+       </div>
 
 
       <script>
@@ -106,15 +107,18 @@ include('connect.php');
           }
 
           $(document).ready(function() {
-             $(".text").load("sign.php");
-             $("#settings").click(function(){
-                $(".text").load("sign.php");
+             $(".text").load("hostels/addhostel.php");
+             $("#hostels").click(function(){
+                $(".text").load("hostels/addhostel.php");           
              }); 
 
             //  $("#add").click(function(){
             //     $("#add").css({"color":"white","text-decoration":"none"});
             //     $(".frame").load("register.php");
             // });
+            $('#settings').click(function(){
+                $('.text').load('sign.php');
+            });
           });
 
 </script>

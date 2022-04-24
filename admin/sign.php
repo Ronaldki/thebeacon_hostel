@@ -82,34 +82,21 @@
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  /* background-color: rgb(0,0,0); Fallback color */
-  /* background-color: #fff;  */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
 }
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%; 
 }
 
-/* The Close Button */
-/* .close {
-  color: #aaa;
-  float: right;
-  
-  
-}
 
-.close:hover,
-.close:focus 
-  color: black;
-  text-decoration: none;
-   */
+
 
    #cls{
      margin-left:95%;
@@ -117,6 +104,10 @@
      color:red; 
      font-size: 28px;
     font-weight: bold;
+    background-color:black;
+    text-align:center;
+    padding:5px;
+    border-radius:5px;
 
    }
 
@@ -130,6 +121,9 @@ margin-left:10%
 
 <body>
 <button type="button" class="regbtn" id="myBtn">Register Admin</button>
+<br>
+<!-- <button type="button" class="regbtn" id="myBtn"><a href="hostels/addhostel.php">Add New Hostel</a> </button> -->
+ <!-- modal register new admin -->
 	<div class="container modal" id="myModal">
  <form action="" method="post" class="">
             <div class="modal-content">
@@ -179,6 +173,34 @@ margin-left:10%
             </div>
         </form>            
 	</div>
+  <!-- modal register new admin -->
+
+  <!-- modal addhostel................ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <script>
