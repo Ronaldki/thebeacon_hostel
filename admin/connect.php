@@ -51,28 +51,64 @@ if(isset($_POST['sub'])){
 
 
 
-if(isset($_POST['send'])){
-    $hname = $_POST['hostname'];
-    $ownname = $_POST['ownername'];
-    $ownnuber = $_POST['number'];
-    $hlocation = $_POST['location'];
-    $roomsavail = $_POST['rooms'];
-    $status = $_POST['status'];
-    $hostimg = $_POST['hostimage'];
-    $backimg = $_POST['backimage'];
-    $roomimg = $_POST['roomimage'];
+// if(isset($_POST['send'])){
+//     $hname = $_POST['hostname'];
+//     $ownname = $_POST['ownername'];
+//     $ownnuber = $_POST['number'];
+//     $hlocation = $_POST['location'];
+//     $roomsavail = $_POST['rooms'];
+//     $status = $_POST['status'];
+//     $hostimg = $_POST['hostimage'];
+//     $backimg = $_POST['backimage'];
+//     $roomimg = $_POST['roomimage'];
 
 
-    $qry = "INSERT INTO hostel_tbl(hostel_name, owner_name,owner_number,hostel_location, rooms_available, mixed_or_single, hostel_picture, sample_image,back_image) VALUES('$hname', '$ownname', '$ownnuber', '$hlocation', '$roomsavail', '$status','$hostimg', '$backimg','$roomimg')";
+//     $qry = "INSERT INTO hostel_tbl(hostel_name, owner_name,owner_number,hostel_location, rooms_available, mixed_or_single, hostel_picture, sample_image,back_image) VALUES('$hname', '$ownname', '$ownnuber', '$hlocation', '$roomsavail', '$status','$hostimg', '$backimg','$roomimg')";
 
-        $rs = mysqli_query($con,$qry);
-        if($rs){
-            header('location:main.php'); 
-        }
-        else{
-            echo '<script type = "text/JavaScript">';
-            echo 'alert("Data Not Insertd")';
-            echo '</script>';
-        }
+//         $rs = mysqli_query($con,$qry);
+//         if($rs){
+//             header('location:main.php'); 
+//         }
+//         else{
+//             echo '<script type = "text/JavaScript">';
+//             echo 'alert("Data Not Insertd")';
+//             echo '</script>';
+//         }
 
+// }
+?>
+<?php
+//  include "config/connection.php";
+$con = mysqli_connect('localhost','root', '', 'beacon_db');
+
+if($con){
+}else{
+    echo 'Not Connected to database';
 }
+
+if(isset($_POST['send'])){
+
+    $host = $_POST['hostname'];
+    $name = $_POST['ownername'];
+    $num =  $_POST['number'];
+    $location = $_POST['location'];
+    $room = $_POST['rooms'];
+    $status = $_POST['status'];
+    $hostimage = $_POST['hostimage'];
+    $roomsample = $_POST['roomimage'];
+    $back = $_POST['backimage'];
+
+
+    $query = "INSERT INTO hostel_tbl(hostel_name,owner_name,owner_number,hostel_location,rooms_available,mixed_or_single,hostel_picture,sample_image,back_image) VALUES('$host', '$name','$num','$location','$room','$status','$hostimage','$roomsample','$back') ";
+
+    $results= mysqli_query($con,$query);
+    
+    if($results){
+     header("location:main.php");
+    }
+    else{
+        echo 'Nothing is inserted';
+    }
+}
+
+?>

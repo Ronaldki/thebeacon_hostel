@@ -50,7 +50,7 @@ include('connect.php');
             <li>
                 <a href="#">
                     <i class='bx bxs-folder-plus'></i> 
-                    <span class="links_name">Roams</span>
+                    <span class="links_name">Rooms</span>
                 </a>
                 <span class="tooltip">Rooms</span>
             </li>
@@ -60,6 +60,13 @@ include('connect.php');
                     <span class="links_name">Bookings</span>
                 </a>
                 <span class="tooltip">Bookings</span>
+            </li>
+            <li>
+                <a href="#" id="rooms">
+                    <i class='bx bx-building-house'></i>
+                    <span class="links_name">NewRoom</span>
+                </a>
+                <span class="tooltip">Add Room</span>
             </li>
             <li>
                 <!-- All settings here...... -->
@@ -111,6 +118,9 @@ include('connect.php');
              $("#hostels").click(function(){
                 $(".text").load("hostels/addhostel.php");           
              }); 
+             $('#rooms').click(function(){
+                $('.text').load("hostels/addroom.php");
+             });
 
             //  $("#add").click(function(){
             //     $("#add").css({"color":"white","text-decoration":"none"});

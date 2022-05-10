@@ -1,13 +1,10 @@
-<?php
-//  include "config/connection.php";
 
 
-?>
 <html>
     <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 <style>
 form{
@@ -51,10 +48,10 @@ form .modal-content .fontuser input{
 </head>
     <div class="container mycontent">
         <h3 style="text-align:center;">Add New Hostel</h3>
-        <form action="" method="POST" class="form">
+        <form action="" method="post" class="card">
             <div class="modal-content">
                 <span class="close" id="btncls">X</span>
-                <div class="row">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
                     <div class="col-6">
                         <div class="fontuser form-group">
                             <label><b>Hostel Name</b></label>
@@ -149,6 +146,18 @@ form .modal-content .fontuser input{
             </div>
         </form>            
     </div>
+
+
+    <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
+        <div class="col bg-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nihil culpa hic, quibusdam inventore iste odio aliquam necessitatibus corporis, autem dolorum quae tempore harum consequuntur animi quaerat modi, veritatis repellat.
+        </div>
+        <div class="col bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nihil culpa hic, quibusdam inventore iste odio aliquam necessitatibus corporis, autem dolorum quae tempore harum consequuntur animi quaerat modi, veritatis repellat.
+        </div>
+        <div class="col bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nihil culpa hic, quibusdam inventore iste odio aliquam necessitatibus corporis, autem dolorum quae tempore harum consequuntur animi quaerat modi, veritatis repellat.
+        </div>
+        <div class="col bg-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nihil culpa hic, quibusdam inventore iste odio aliquam necessitatibus corporis, autem dolorum quae tempore harum consequuntur animi quaerat modi, veritatis repellat.
+        </div>
+    </div> -->
     <script>
 
     $(document).ready(function(){
