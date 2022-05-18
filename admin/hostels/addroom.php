@@ -1,41 +1,5 @@
 
-<?php
 
-$con = mysqli_connect('localhost','root', '', 'beacon_db');
-if(isset($_POST['send'])){
-    $decs= $_POST['roomdesc'];
-    $roomp= $_POST['roomprice'];
-    $roomname = $_POST['roomname'];
-    $sts = $_POST['hostelname'];
-    $s = $_POST['st'];
-    $q =" SELECT * FROM hostel_tbl WHERE hostel_name = '$sts' ";
-    $dat =mysqli_query($con, $q);
-    if(mysqli_num_rows($dat)>0){
-        $tr = [];
-
-        while($row = mysqli_fetch_assoc($dat)){
-            $tr=  $row['hostel_id'];
-            // echo $tr;
-            // $final = array_push( $tr, $row['hostel_id'] );
-
-        }
-        // echo $tr;
-        // echo $tr;
-        // echo $final;
-        $qr= "INSERT INTO room_tbl(descriptions,hostel_id,room_name,fees,status_booked_or_not) VALUES ('$decs','$tr','$roomname','$roomp', '$s')";
-        $rs= mysqli_query($con, $qr);
-    
-        if($rs){
-            header('location:addhostel.php');
-    
-        }else{
-            echo 'Data not inserted';
-        }
-    }
-    
-
-}
-?>
 <html>
     <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -149,7 +113,7 @@ form .modal-content .fontuser input{
                         </div>
                     </div>
                       <div class="form-group fontuser">
-                            <button type="submit" id="" name="send" class="btn btn-primary">Register</button>
+                            <button type="submit" id="" name="set" class="btn btn-primary">Register</button>
                       </div>
             </div>
         </form>            

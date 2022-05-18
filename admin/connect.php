@@ -79,7 +79,7 @@ if(isset($_POST['sub'])){
 ?>
 <?php
 //  include "config/connection.php";
-$con = mysqli_connect('localhost','root', '', 'beacon_db');
+// $con = mysqli_connect('localhost','root', '', 'beacon_db');
 
 if($con){
 }else{
@@ -111,4 +111,41 @@ if(isset($_POST['send'])){
     }
 }
 
+?>
+<?php
+
+$con = mysqli_connect('localhost','root', '', 'beacon_db');
+if(isset($_POST['set'])){
+    $decs= $_POST['roomdesc'];
+    $roomp= $_POST['roomprice'];
+    $roomname = $_POST['roomname'];
+    $sts = $_POST['hostelname'];
+    $s = $_POST['st'];
+    $q =" SELECT * FROM hostel_tbl WHERE hostel_name = '$sts' ";
+    $dat =mysqli_query($con, $q);
+    if(mysqli_num_rows($dat)>0){
+        $tr = [];
+
+        while($row = mysqli_fetch_assoc($dat)){
+            $tr=  $row['hostel_id'];
+            // echo $tr;
+            // $final = array_push( $tr, $row['hostel_id'] );
+
+        }
+        // echo $tr;
+        // echo $tr;
+        // echo $final;
+        $qr= "INSERT INTO room_tbl(descriptions,hostel_id,room_name,fees,status_booked_or_not) VALUES ('$decs','$tr','$roomname','$roomp', '$s')";
+        $rs= mysqli_query($con, $qr);
+    
+        if($rs){
+            header('location:main.php');
+    
+        }else{
+            echo 'Data not inserted';
+        }
+    }
+    
+
+}
 ?>

@@ -28,17 +28,17 @@ include('connect.php');
         </div>
         <ul class="nav_list">
             <li>
-               
+            
                     <i class="bx bx-search"></i>
                     <input type="text" placeholder="Search....">
                <span class="tooltip">Search</span>
             </li>
             <li>
-                <a href="#" id="hostels">
+                <a href="#" id="home">
                     <i class='bx bxs-building-house'></i>
-                    <span class="links_name">Hostels</span>
+                    <span class="links_name">Home</span>
                 </a>
-                <span class="tooltip">Hostels</span>
+                <span class="tooltip">Home</span>
             </li>
             <li>
                 <a href="#">
@@ -48,11 +48,11 @@ include('connect.php');
                 <span class="tooltip">Message</span>
             </li>
             <li>
-                <a href="#">
+                <a href="#" id="hostels">
                     <i class='bx bxs-folder-plus'></i> 
-                    <span class="links_name">Rooms</span>
+                    <span class="links_name">Add Hostels</span>
                 </a>
-                <span class="tooltip">Rooms</span>
+                <span class="tooltip">Hostels</span>
             </li>
             <li>
                 <a href="#">
@@ -114,7 +114,11 @@ include('connect.php');
           }
 
           $(document).ready(function() {
-             $(".text").load("hostels/addhostel.php");
+                //the default page load here........
+              $(".text").load("home.php"); 
+              $('#home').click(function(){
+                    $('.text').load('home.php');
+              });
              $("#hostels").click(function(){
                 $(".text").load("hostels/addhostel.php");           
              }); 

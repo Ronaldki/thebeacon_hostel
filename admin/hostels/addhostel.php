@@ -147,7 +147,6 @@ form .modal-content .fontuser input{
         </form>            
     </div>
 
-
     <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
         <div class="col bg-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nihil culpa hic, quibusdam inventore iste odio aliquam necessitatibus corporis, autem dolorum quae tempore harum consequuntur animi quaerat modi, veritatis repellat.
         </div>

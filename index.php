@@ -126,7 +126,7 @@
                                 <a href="index.php" class="w3-btn btn nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://campusweekly.herokuapp.com" class="w3-btn btn nav-link">News</a>
+                                <a href="#" class="w3-btn btn nav-link">News</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="w3-btn btn nav-link">Book hostel</a>
@@ -342,38 +342,8 @@
             <h3>Enjoy Your Hostel</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa incidunt error ea? Tenetur praesentium, ducimus eum molestiae ut nobis voluptatem</p>
             <a href="#" class="btn">Book Now</a>
-        </section>     
-        <section class="card">
-            <img src="images/8.jpg" alt="Our Rooms">
-            <h3>Enjoy Your Hostel</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa incidunt error ea? Tenetur praesentium, ducimus eum molestiae ut nobis voluptatem</p>
-            <a href="#" class="btn">Book Now</a>
-        </section>     
-        <section class="card">
-            <img src="images/41.jpg" alt="Our Rooms">
-            <h3>Enjoy Your Hostel</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa incidunt error ea? Tenetur praesentium, ducimus eum molestiae ut nobis voluptatem</p>
-            <a href="#" class="btn">Book Now</a>
-        </section>     
-        <section class="card">
-            <img src="images/11.jpg" alt="Our Rooms">
-            <h3>Enjoy Your Hostel</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa incidunt error ea? Tenetur praesentium, ducimus eum molestiae ut nobis voluptatem</p>
-            <a href="#" class="btn">Book Now</a>
-        </section>     
-        <section class="card">
-            <img src="images/41.jpg" alt="Our Rooms">
-            <h3>Enjoy Your Hostel</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa incidunt error ea? Tenetur praesentium, ducimus eum molestiae ut nobis voluptatem</p>
-            <a href="#" class="btn">Book Now</a>
-        </section>     
-        <section class="card">
-            <img src="images/11.jpg" alt="Our Rooms">
-            <h3>Enjoy Your Hostel</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa incidunt error ea? Tenetur praesentium, ducimus eum molestiae ut nobis voluptatem</p>
-            <a href="#" class="btn">Book Now</a>
-        </section>     
-   </div>
+        </section>       
+    </div>
   
 	<!-- Our Footer -->
 	<footer>

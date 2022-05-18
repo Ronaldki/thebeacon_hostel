@@ -76,12 +76,13 @@
 			color: gray;
 		}
         /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
+.modalf {
+  /* display: none; */
+   /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
-  top: 0;
+  margin-top: 0px !important;
   width: 100%; 
   height: 100%; 
   overflow: auto; 
@@ -98,7 +99,7 @@
 
 
 
-   #cls{
+   .close{
      margin-left:95%;
      cursor: pointer;
      color:red; 
@@ -120,11 +121,11 @@ margin-left:10%
 </head>
 
 <body>
-<button type="button" class="regbtn" id="myBtn">Register Admin</button>
+<!-- <button type="button" class="regbtn" id="myBtn">Register Admin</button> -->
 <br>
 <!-- <button type="button" class="regbtn" id="myBtn"><a href="hostels/addhostel.php">Add New Hostel</a> </button> -->
  <!-- modal register new admin -->
-	<div class="container modal" id="myModal">
+	<div class="container modalf" id="myModal">
  <form action="" method="post" class="">
             <div class="modal-content">
                 <span class="close" id="cls">X</span>
@@ -206,13 +207,13 @@ margin-left:10%
   <script>
 
     
-    $(document).ready(function(){
-      $('#myBtn').click(function(){
-        $('.modal').show();
-      });
+     $(document).ready(function(){
+    //   $('#myBtn').click(function(){
+    //     $('.modalf').show();
+    //   });
 
       $('#cls').click(function(){
-        $('.modal').hide();
+        $('.modalf').hide();
 
       });
 
