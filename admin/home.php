@@ -37,6 +37,7 @@
       </div>
       <div class="col-4 d-flex">
           <h3>User</h3>
+          <i class="bx bx-home" ></i>
            &nbsp;
          <a href=""><i class="bx bx-user"></i></a> 
       </div>
